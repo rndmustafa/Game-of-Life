@@ -25,13 +25,15 @@ def create_grid(row, col):
     return grid
 
 def draw_grid(grid, row, col):
-    for x in range(row, 0, -1):
+    for x in range(1, row+1):
         for y in range(1, col+1):
             print (grid[(x, y)], end = " ")
         print()
     print()
 
 def user_input(grid):
+    print("Place cells in this format: Row Column. For example: 2 1")
+    print("When finished placing cells, just hit enter.")
     place = "null"
     while place != "":
         place = input("Place cell: ")
